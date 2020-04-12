@@ -11,21 +11,22 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-
+//This is Basic Activity
 public class MainActivity extends AppCompatActivity {
 
+    Toolbar toolbar = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Hello World!", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -47,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            //setting xml in menu->menu_main.xml, when clicked show Sncakbar text
+            Snackbar.make(toolbar,"Settings Clicked",Snackbar.LENGTH_SHORT).show();
             return true;
         }
 
