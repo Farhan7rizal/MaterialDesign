@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "29.0.0"
 
     defaultConfig {
         applicationId "com.example.materialdesign"
         minSdkVersion 16
-        targetSdkVersion 29
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -34,4 +34,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//    We import this for don't know
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v13:28.0.0'
 }
